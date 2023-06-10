@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Marka = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtMarkaAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Marka = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -53,6 +53,16 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 110;
+            // 
+            // Marka
+            // 
+            this.Marka.Text = "Marka";
+            this.Marka.Width = 365;
             // 
             // txtID
             // 
@@ -114,16 +124,6 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 110;
-            // 
-            // Marka
-            // 
-            this.Marka.Text = "Marka";
-            this.Marka.Width = 365;
-            // 
             // formMarka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +139,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "formMarka";
             this.Text = "Marka Sayfası";
+            this.Load += new System.EventHandler(this.formMarka_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
