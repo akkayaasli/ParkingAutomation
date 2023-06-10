@@ -15,6 +15,8 @@ namespace ParkingAut.classes
         [StringLength(70)]
         public string MarkaAdi { get; set; }
 
-        public virtual ICollection<serialNum> serialNums { get; set; } 
+        public virtual ICollection<serialNum> serialNums { get; set; }
+
+        public virtual ICollection<VehicleParkingInformation> VehicleParkingInformations { get; set; }
     }
 }

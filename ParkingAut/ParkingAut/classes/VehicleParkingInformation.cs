@@ -47,5 +47,9 @@ namespace ParkingAut.classes
         public DateTime GirisTarihi { get; set; }
 
         public virtual CarParkingSpaces CarParkingSpaces { get; set; }
+
+        public virtual brands brands { get; set; }
+
+        public virtual serialNum serialNum { get; set; }
     }
 }
