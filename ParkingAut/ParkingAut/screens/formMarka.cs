@@ -23,18 +23,35 @@ namespace ParkingAut.screens
 
         private void formMarka_Load(object sender, EventArgs e)
         {
-            var markaListesi = db.TableBrands.ToList();
-            for (int i = 0; i < markaListesi.Count; i++)
-            {
-                ListViewItem ekle = new ListViewItem(markaListesi[i].ID.ToString());
-                ekle.SubItems.Add(markaListesi[i].MarkaAdi);
-                listView1.Items.Add(ekle);
-            }
+            MarkaListele();
+
         }
 
+        private void MarkaListele()
+        {
+            var markaListesi = db.TableBrands.ToList();
+                for (int i = 0; i < markaListesi.Count; i++)
+                {
+                    ListViewItem ekle = new ListViewItem(markaListesi[i].ID.ToString());
+                    ekle.SubItems.Add(markaListesi[i].MarkaAdi);
+                    listView1.Items.Add(ekle);
+                }
+        }
+
+        void Temizle()
+        {
+            txtID.Text = "";
+            txtMarkaAdi.Text = "";
+        }
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
+            var tbl = new brands();
+            tbl.MarkaAdi = txtMarkaAdi.Text;
+            db.TableBrands.Add(tbl);
+            db.SaveChanges();
+            MessageBox.Show("Araç markası eklendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MarkaListele();
+            Temizle();
         }
 
 
