@@ -65,8 +65,15 @@ namespace ParkingAut.screens
             }
         }
 
- 
-
-
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ListViewItem secilenID = listView1.SelectedItems[0];
+            var sil = db.TableBrands.FirstOrDefault(x => x.ID == int.Parse(secilenID.SubItems[0].Text));
+            db.TableBrands.Remove(sil);
+            db.SaveChanges();
+            MessageBox.Show("Araç markası silindi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MarkaListele();
+            Temizle();
+        }
     }
 }
