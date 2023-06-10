@@ -14,5 +14,7 @@ namespace ParkingAut.classes
         [Column(TypeName = "varchar")]
         [StringLength(70)]
         public string MarkaAdi { get; set; }
+
+        public virtual ICollection<serialNum> serialNum { get; set; } 
     }
 }

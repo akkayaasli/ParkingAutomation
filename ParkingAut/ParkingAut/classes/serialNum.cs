@@ -15,6 +15,10 @@ namespace ParkingAut.classes
         public int MarkaID { get; set; }
         [Column(TypeName = "varchar")]
         [StringLength(70)]
+
+
         public string seri { get; set; }
+
+        public virtual brands brands { get; set; }
     }
 }
