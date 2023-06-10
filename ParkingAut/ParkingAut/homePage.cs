@@ -16,5 +16,22 @@ namespace ParkingAut
         {
             InitializeComponent();
         }
+
+        private void araçlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void markaTool_Click(object sender, EventArgs e)
+        {
+            screens.formMarka marka = new screens.formMarka();
+            marka.Show();
+        }
+
+        private void btnMarka_Click(object sender, EventArgs e)
+        {
+            screens.formMarka marka = new screens.formMarka();
+            marka.Show();
+        }
     }
 }
