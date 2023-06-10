@@ -17,5 +17,7 @@ namespace ParkingAut.classes
         [Column(TypeName = "varchar")]
         [StringLength(70)]
         public string Durumu { get; set; }
+
+        public virtual ICollection<VehicleParkingInformation> VehicleParkingInformations { get; set; }
     }
 }

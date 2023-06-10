@@ -45,5 +45,7 @@ namespace ParkingAut.classes
         public string Aciklama { get; set; }
 
         public DateTime GirisTarihi { get; set; }
+
+        public virtual CarParkingSpaces CarParkingSpaces { get; set; }
     }
 }
