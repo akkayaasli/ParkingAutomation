@@ -29,6 +29,7 @@ namespace ParkingAut.screens
 
         private void MarkaListele()
         {
+            listView1.Items.Clear();
             var markaListesi = db.TableBrands.ToList();
                 for (int i = 0; i < markaListesi.Count; i++)
                 {
@@ -67,11 +68,23 @@ namespace ParkingAut.screens
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            ListViewItem secilenID = listView1.SelectedItems[0];
-            var sil = db.TableBrands.FirstOrDefault(x => x.ID == int.Parse(secilenID.SubItems[0].Text));
+            ListViewItem SecilenID = listView1.SelectedItems[0];
+            int secilenID = int.Parse(SecilenID.SubItems[0].Text);
+            var sil = db.TableBrands.FirstOrDefault(x => x.ID == secilenID);
             db.TableBrands.Remove(sil);
             db.SaveChanges();
             MessageBox.Show("Araç markası silindi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MarkaListele();
+            Temizle();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var guncelle = db.TableBrands.FirstOrDefault(x => x.ID == id);
+            guncelle.MarkaAdi = txtMarkaAdi.Text;
+            db.SaveChanges();
+            MessageBox.Show("Araç markası güncellendi.", "Kaydet", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MarkaListele();
             Temizle();
         }
