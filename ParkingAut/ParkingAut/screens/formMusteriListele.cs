@@ -82,5 +82,16 @@ namespace ParkingAut.screens
             Temizle();
             dataGridView1.DataSource = db.TableCustomer.ToList();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            var sil = db.TableCustomer.FirstOrDefault(x => x.ID == id);
+            db.TableCustomer.Remove(sil);
+            db.SaveChanges();
+            MessageBox.Show("Silme işlemi başarılı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Temizle();
+            dataGridView1.DataSource = db.TableCustomer.ToList();
+        }
     }
 }
