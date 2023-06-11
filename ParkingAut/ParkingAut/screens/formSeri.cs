@@ -24,6 +24,10 @@ namespace ParkingAut.screens
         private void formSeri_Load(object sender, EventArgs e)
         {
             Listele();
+            var comboListe = db.TableBrands.ToList();
+            comboMarka.DataSource = comboListe;
+            comboMarka.DisplayMember = "MarkaAdi";
+            comboMarka.ValueMember = "ID";
         }
 
         private void Listele()
@@ -78,6 +82,34 @@ namespace ParkingAut.screens
             Listele();
             Temizle();
 
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var guncelle = db.TableSerialNum.FirstOrDefault(x => x.ID == id);
+            guncelle.MarkaID = (int)comboMarka.SelectedValue;
+            guncelle.seri = txtSeri.Text;
+            db.SaveChanges();
+            MessageBox.Show("Araç serisi güncellendi.", "Kaydet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Listele();
+            Temizle();
+        }
+
+        private void formSeri_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            ListViewItem secilen = listView1.SelectedItems[0];//hangisi seçildi
+            if (listView1.SelectedItems.Count > 0)//seçilen birden fazla mı?
+            {
+                txtID.Text = secilen.SubItems[0].Text;
+                comboMarka.Text = secilen.SubItems[1].Text;
+                txtSeri.Text = secilen.SubItems[2].Text;
+            }
         }
     }
 }

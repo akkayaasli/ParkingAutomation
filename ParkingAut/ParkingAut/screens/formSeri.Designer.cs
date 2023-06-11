@@ -57,6 +57,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // ID
             // 
@@ -142,6 +143,7 @@
             this.btnGuncelle.TabIndex = 9;
             this.btnGuncelle.Text = "Guncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // comboMarka
             // 
@@ -171,6 +173,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seri Sayfası";
             this.Load += new System.EventHandler(this.formSeri_Load);
+            this.DoubleClick += new System.EventHandler(this.formSeri_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
