@@ -36,22 +36,22 @@
             this.araçOtoparkGirişiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.araçOtoparkÇıkışıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markaTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.seriTool = new System.Windows.Forms.ToolStripMenuItem();
             this.satışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otoparkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkımızdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yardımToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.markaTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnMuteriEkle = new System.Windows.Forms.Button();
-            this.btnMusteriListele = new System.Windows.Forms.Button();
-            this.btnAracOtoparkGirisi = new System.Windows.Forms.Button();
-            this.btnAracOtoparkCikisi = new System.Windows.Forms.Button();
-            this.btnOtoparkYerleri = new System.Windows.Forms.Button();
-            this.btnMarka = new System.Windows.Forms.Button();
-            this.btnSeri = new System.Windows.Forms.Button();
             this.btnSatis = new System.Windows.Forms.Button();
+            this.btnSeri = new System.Windows.Forms.Button();
+            this.btnMarka = new System.Windows.Forms.Button();
+            this.btnOtoparkYerleri = new System.Windows.Forms.Button();
+            this.btnAracOtoparkCikisi = new System.Windows.Forms.Button();
+            this.btnAracOtoparkGirisi = new System.Windows.Forms.Button();
+            this.btnMusteriListele = new System.Windows.Forms.Button();
+            this.btnMuteriEkle = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,20 @@
             this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.ayarlarToolStripMenuItem.Text = "Ayarlar";
             // 
+            // markaTool
+            // 
+            this.markaTool.Name = "markaTool";
+            this.markaTool.Size = new System.Drawing.Size(107, 22);
+            this.markaTool.Text = "Marka";
+            this.markaTool.Click += new System.EventHandler(this.markaTool_Click);
+            // 
+            // seriTool
+            // 
+            this.seriTool.Name = "seriTool";
+            this.seriTool.Size = new System.Drawing.Size(180, 22);
+            this.seriTool.Text = "Seri";
+            this.seriTool.Click += new System.EventHandler(this.seriTool_Click);
+            // 
             // satışToolStripMenuItem
             // 
             this.satışToolStripMenuItem.Name = "satışToolStripMenuItem";
@@ -172,63 +186,24 @@
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 1;
             // 
-            // markaTool
+            // btnSatis
             // 
-            this.markaTool.Name = "markaTool";
-            this.markaTool.Size = new System.Drawing.Size(180, 22);
-            this.markaTool.Text = "Marka";
-            this.markaTool.Click += new System.EventHandler(this.markaTool_Click);
+            this.btnSatis.Location = new System.Drawing.Point(416, 13);
+            this.btnSatis.Name = "btnSatis";
+            this.btnSatis.Size = new System.Drawing.Size(75, 45);
+            this.btnSatis.TabIndex = 10;
+            this.btnSatis.Text = "Satış";
+            this.btnSatis.UseVisualStyleBackColor = true;
             // 
-            // seriTool
+            // btnSeri
             // 
-            this.seriTool.Name = "seriTool";
-            this.seriTool.Size = new System.Drawing.Size(180, 22);
-            this.seriTool.Text = "Seri";
-            // 
-            // btnMuteriEkle
-            // 
-            this.btnMuteriEkle.Location = new System.Drawing.Point(11, 13);
-            this.btnMuteriEkle.Name = "btnMuteriEkle";
-            this.btnMuteriEkle.Size = new System.Drawing.Size(75, 45);
-            this.btnMuteriEkle.TabIndex = 2;
-            this.btnMuteriEkle.Text = "Müşteri Ekle";
-            this.btnMuteriEkle.UseVisualStyleBackColor = true;
-            // 
-            // btnMusteriListele
-            // 
-            this.btnMusteriListele.Location = new System.Drawing.Point(92, 13);
-            this.btnMusteriListele.Name = "btnMusteriListele";
-            this.btnMusteriListele.Size = new System.Drawing.Size(75, 45);
-            this.btnMusteriListele.TabIndex = 3;
-            this.btnMusteriListele.Text = "Müşteri Listele";
-            this.btnMusteriListele.UseVisualStyleBackColor = true;
-            // 
-            // btnAracOtoparkGirisi
-            // 
-            this.btnAracOtoparkGirisi.Location = new System.Drawing.Point(173, 13);
-            this.btnAracOtoparkGirisi.Name = "btnAracOtoparkGirisi";
-            this.btnAracOtoparkGirisi.Size = new System.Drawing.Size(75, 45);
-            this.btnAracOtoparkGirisi.TabIndex = 4;
-            this.btnAracOtoparkGirisi.Text = "Otopark Girişi";
-            this.btnAracOtoparkGirisi.UseVisualStyleBackColor = true;
-            // 
-            // btnAracOtoparkCikisi
-            // 
-            this.btnAracOtoparkCikisi.Location = new System.Drawing.Point(254, 13);
-            this.btnAracOtoparkCikisi.Name = "btnAracOtoparkCikisi";
-            this.btnAracOtoparkCikisi.Size = new System.Drawing.Size(75, 45);
-            this.btnAracOtoparkCikisi.TabIndex = 5;
-            this.btnAracOtoparkCikisi.Text = "Otopark Çıkışı";
-            this.btnAracOtoparkCikisi.UseVisualStyleBackColor = true;
-            // 
-            // btnOtoparkYerleri
-            // 
-            this.btnOtoparkYerleri.Location = new System.Drawing.Point(335, 13);
-            this.btnOtoparkYerleri.Name = "btnOtoparkYerleri";
-            this.btnOtoparkYerleri.Size = new System.Drawing.Size(75, 45);
-            this.btnOtoparkYerleri.TabIndex = 6;
-            this.btnOtoparkYerleri.Text = "Müşteri Ekle";
-            this.btnOtoparkYerleri.UseVisualStyleBackColor = true;
+            this.btnSeri.Location = new System.Drawing.Point(578, 13);
+            this.btnSeri.Name = "btnSeri";
+            this.btnSeri.Size = new System.Drawing.Size(75, 45);
+            this.btnSeri.TabIndex = 9;
+            this.btnSeri.Text = "Seri";
+            this.btnSeri.UseVisualStyleBackColor = true;
+            this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
             // 
             // btnMarka
             // 
@@ -240,23 +215,50 @@
             this.btnMarka.UseVisualStyleBackColor = true;
             this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
             // 
-            // btnSeri
+            // btnOtoparkYerleri
             // 
-            this.btnSeri.Location = new System.Drawing.Point(578, 13);
-            this.btnSeri.Name = "btnSeri";
-            this.btnSeri.Size = new System.Drawing.Size(75, 45);
-            this.btnSeri.TabIndex = 9;
-            this.btnSeri.Text = "Seri";
-            this.btnSeri.UseVisualStyleBackColor = true;
+            this.btnOtoparkYerleri.Location = new System.Drawing.Point(335, 13);
+            this.btnOtoparkYerleri.Name = "btnOtoparkYerleri";
+            this.btnOtoparkYerleri.Size = new System.Drawing.Size(75, 45);
+            this.btnOtoparkYerleri.TabIndex = 6;
+            this.btnOtoparkYerleri.Text = "Müşteri Ekle";
+            this.btnOtoparkYerleri.UseVisualStyleBackColor = true;
             // 
-            // btnSatis
+            // btnAracOtoparkCikisi
             // 
-            this.btnSatis.Location = new System.Drawing.Point(416, 13);
-            this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(75, 45);
-            this.btnSatis.TabIndex = 10;
-            this.btnSatis.Text = "Satış";
-            this.btnSatis.UseVisualStyleBackColor = true;
+            this.btnAracOtoparkCikisi.Location = new System.Drawing.Point(254, 13);
+            this.btnAracOtoparkCikisi.Name = "btnAracOtoparkCikisi";
+            this.btnAracOtoparkCikisi.Size = new System.Drawing.Size(75, 45);
+            this.btnAracOtoparkCikisi.TabIndex = 5;
+            this.btnAracOtoparkCikisi.Text = "Otopark Çıkışı";
+            this.btnAracOtoparkCikisi.UseVisualStyleBackColor = true;
+            // 
+            // btnAracOtoparkGirisi
+            // 
+            this.btnAracOtoparkGirisi.Location = new System.Drawing.Point(173, 13);
+            this.btnAracOtoparkGirisi.Name = "btnAracOtoparkGirisi";
+            this.btnAracOtoparkGirisi.Size = new System.Drawing.Size(75, 45);
+            this.btnAracOtoparkGirisi.TabIndex = 4;
+            this.btnAracOtoparkGirisi.Text = "Otopark Girişi";
+            this.btnAracOtoparkGirisi.UseVisualStyleBackColor = true;
+            // 
+            // btnMusteriListele
+            // 
+            this.btnMusteriListele.Location = new System.Drawing.Point(92, 13);
+            this.btnMusteriListele.Name = "btnMusteriListele";
+            this.btnMusteriListele.Size = new System.Drawing.Size(75, 45);
+            this.btnMusteriListele.TabIndex = 3;
+            this.btnMusteriListele.Text = "Müşteri Listele";
+            this.btnMusteriListele.UseVisualStyleBackColor = true;
+            // 
+            // btnMuteriEkle
+            // 
+            this.btnMuteriEkle.Location = new System.Drawing.Point(11, 13);
+            this.btnMuteriEkle.Name = "btnMuteriEkle";
+            this.btnMuteriEkle.Size = new System.Drawing.Size(75, 45);
+            this.btnMuteriEkle.TabIndex = 2;
+            this.btnMuteriEkle.Text = "Müşteri Ekle";
+            this.btnMuteriEkle.UseVisualStyleBackColor = true;
             // 
             // homePage
             // 

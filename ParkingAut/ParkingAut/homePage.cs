@@ -33,5 +33,17 @@ namespace ParkingAut
             screens.formMarka marka = new screens.formMarka();
             marka.Show();
         }
+
+        private void btnSeri_Click(object sender, EventArgs e)
+        {
+            screens.formSeri seri = new screens.formSeri();
+            seri.Show();
+        }
+
+        private void seriTool_Click(object sender, EventArgs e)
+        {
+            screens.formSeri seri = new screens.formSeri();
+            seri.Show();
+        }
     }
 }
