@@ -58,5 +58,13 @@ namespace ParkingAut.screens
                 Temizle();
             }
         }
+
+        private void btnSec_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFileDialog1.FileName;
+            }
+        }
     }
 }

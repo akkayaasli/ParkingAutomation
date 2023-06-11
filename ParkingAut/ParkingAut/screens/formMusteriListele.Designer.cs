@@ -203,6 +203,7 @@
             this.btnSec.TabIndex = 17;
             this.btnSec.Text = "Seç";
             this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // openFileDialog1
             // 
