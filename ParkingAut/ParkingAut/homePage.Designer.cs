@@ -284,6 +284,7 @@
             this.btnAracOtoparkGirisi.Text = "Otopark Girişi";
             this.btnAracOtoparkGirisi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAracOtoparkGirisi.UseVisualStyleBackColor = true;
+            this.btnAracOtoparkGirisi.Click += new System.EventHandler(this.btnAracOtoparkGirisi_Click);
             // 
             // btnMusteriListele
             // 

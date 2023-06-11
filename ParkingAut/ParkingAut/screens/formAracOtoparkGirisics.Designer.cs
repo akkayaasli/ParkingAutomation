@@ -50,10 +50,10 @@
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.comboParkYeri = new System.Windows.Forms.ComboBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +89,7 @@
             this.txtMusteriID.Name = "txtMusteriID";
             this.txtMusteriID.Size = new System.Drawing.Size(179, 20);
             this.txtMusteriID.TabIndex = 3;
+            this.txtMusteriID.TextChanged += new System.EventHandler(this.txtMusteriID_TextChanged);
             // 
             // txtAdiSoyadi
             // 
@@ -187,6 +188,8 @@
             this.comboMarka.Name = "comboMarka";
             this.comboMarka.Size = new System.Drawing.Size(179, 21);
             this.comboMarka.TabIndex = 18;
+            this.comboMarka.SelectedIndexChanged += new System.EventHandler(this.comboMarka_SelectedIndexChanged);
+            this.comboMarka.ValueMemberChanged += new System.EventHandler(this.comboMarka_ValueMemberChanged);
             // 
             // comboSeri
             // 
@@ -196,6 +199,7 @@
             this.comboSeri.Name = "comboSeri";
             this.comboSeri.Size = new System.Drawing.Size(179, 21);
             this.comboSeri.TabIndex = 19;
+            this.comboSeri.SelectedIndexChanged += new System.EventHandler(this.comboSeri_SelectedIndexChanged);
             // 
             // txtAciklama
             // 
@@ -226,6 +230,14 @@
             this.btnCikis.TabIndex = 22;
             this.btnCikis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCikis.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "eraser.png");
+            this.imageList1.Images.SetKeyName(1, "export.png");
+            this.imageList1.Images.SetKeyName(2, "plus.png");
             // 
             // btnTemizle
             // 
@@ -261,14 +273,6 @@
             this.comboParkYeri.Name = "comboParkYeri";
             this.comboParkYeri.Size = new System.Drawing.Size(179, 21);
             this.comboParkYeri.TabIndex = 25;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "eraser.png");
-            this.imageList1.Images.SetKeyName(1, "export.png");
-            this.imageList1.Images.SetKeyName(2, "plus.png");
             // 
             // formAracOtoparkGirisics
             // 

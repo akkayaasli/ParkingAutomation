@@ -62,5 +62,11 @@ namespace ParkingAut
             screens.formOtoparkYerleri frm = new screens.formOtoparkYerleri();
             frm.Show();
         }
+
+        private void btnAracOtoparkGirisi_Click(object sender, EventArgs e)
+        {
+            screens.formAracOtoparkGirisics form1 = new screens.formAracOtoparkGirisics();
+            form1.Show();
+        }
     }
 }
