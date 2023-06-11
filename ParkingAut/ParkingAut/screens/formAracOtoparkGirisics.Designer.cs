@@ -301,6 +301,7 @@
             this.Name = "formAracOtoparkGirisics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arac Otopark Girisi Sayfası";
+            this.Load += new System.EventHandler(this.formAracOtoparkGirisics_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
