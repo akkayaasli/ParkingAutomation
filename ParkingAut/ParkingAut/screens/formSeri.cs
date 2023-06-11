@@ -46,5 +46,25 @@ namespace ParkingAut.screens
                 listView1.Items.Add(viewItem);
             }
         }
+        void Temizle()
+        {
+            txtID.Text = "";
+            txtSeri.Text = "";
+            comboMarka.Text = "";
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            int markaid = (int)comboMarka.SelectedValue;
+            var ekle = new serialNum();
+            ekle.MarkaID = markaid;
+            ekle.seri = txtSeri.Text;
+            db.TableSerialNum.Add(ekle);
+            db.SaveChanges();
+            Temizle();
+            Listele();
+            MessageBox.Show("Araca yeni seri eklendi.","Kayıt",MessageBoxButtons.OK,MessageBoxIcon.Information);     
+
+        }
     }
 }
