@@ -78,6 +78,12 @@
     <Compile Include="screens\formMarka.Designer.cs">
       <DependentUpon>formMarka.cs</DependentUpon>
     </Compile>
+    <Compile Include="screens\formMusteriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\formMusteriListele.Designer.cs">
+      <DependentUpon>formMusteriListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="screens\formSeri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="screens\formMarka.resx">
       <DependentUpon>formMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\formMusteriListele.resx">
+      <DependentUpon>formMusteriListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screens\formSeri.resx">
       <DependentUpon>formSeri.cs</DependentUpon>
