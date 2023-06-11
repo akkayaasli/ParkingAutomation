@@ -22,5 +22,41 @@ namespace ParkingAut.screens
         {
             dataGridView1.DataSource = db.TableCustomer.ToList();
         }
+
+        void Temizle()
+        {
+            foreach (Control item in Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+            }
+            pictureBox1.ImageLocation = "";
+            dateTimeTarih.Value = DateTime.Now;
+        }
+
+
+
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            var ara = from x in db.TableCustomer
+                      where x.ID.ToString() == txtID.Text
+                      select x;
+            foreach (var item in ara)
+            {
+                txtAdiSoyadi.Text = item.AdiSoyadi;
+                txtTelefon.Text = item.Telefon;
+                txtAdres.Text = item.Adres;
+                txtEmail.Text = item.Email;
+                pictureBox1.ImageLocation = item.Resim;
+                dateTimeTarih.Value = item.Tarih;
+            }
+            if (txtID.Text=="")
+            {
+                Temizle();
+            }
+        }
     }
 }
