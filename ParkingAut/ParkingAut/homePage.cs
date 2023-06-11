@@ -51,5 +51,16 @@ namespace ParkingAut
             screens.formMusteriListele seri = new screens.formMusteriListele();
             seri.Show();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            saatToolStripMenuItem.Text = DateTime.Now.ToString();
+        }
+
+        private void btnOtoparkYerleri_Click(object sender, EventArgs e)
+        {
+            screens.formOtoparkYerleri frm = new screens.formOtoparkYerleri();
+            frm.Show();
+        }
     }
 }

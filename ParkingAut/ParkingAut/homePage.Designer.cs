@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.müşterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müşteriEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,8 @@
             this.btnAracOtoparkGirisi = new System.Windows.Forms.Button();
             this.btnMusteriListele = new System.Windows.Forms.Button();
             this.btnMuteriEkle = new System.Windows.Forms.Button();
+            this.saatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +69,8 @@
             this.otoparkToolStripMenuItem,
             this.hakkımızdaToolStripMenuItem,
             this.yardımToolStripMenuItem,
-            this.çıkışToolStripMenuItem});
+            this.çıkışToolStripMenuItem,
+            this.saatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -221,8 +225,9 @@
             this.btnOtoparkYerleri.Name = "btnOtoparkYerleri";
             this.btnOtoparkYerleri.Size = new System.Drawing.Size(75, 45);
             this.btnOtoparkYerleri.TabIndex = 6;
-            this.btnOtoparkYerleri.Text = "Müşteri Ekle";
+            this.btnOtoparkYerleri.Text = "Otopark Yerleri";
             this.btnOtoparkYerleri.UseVisualStyleBackColor = true;
+            this.btnOtoparkYerleri.Click += new System.EventHandler(this.btnOtoparkYerleri_Click);
             // 
             // btnAracOtoparkCikisi
             // 
@@ -260,6 +265,16 @@
             this.btnMuteriEkle.TabIndex = 2;
             this.btnMuteriEkle.Text = "Müşteri Ekle";
             this.btnMuteriEkle.UseVisualStyleBackColor = true;
+            // 
+            // saatToolStripMenuItem
+            // 
+            this.saatToolStripMenuItem.Name = "saatToolStripMenuItem";
+            this.saatToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // homePage
             // 
@@ -305,6 +320,8 @@
         private System.Windows.Forms.Button btnAracOtoparkCikisi;
         private System.Windows.Forms.Button btnAracOtoparkGirisi;
         private System.Windows.Forms.Button btnMusteriListele;
+        private System.Windows.Forms.ToolStripMenuItem saatToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

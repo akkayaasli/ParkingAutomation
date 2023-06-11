@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarParkAUTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarParkAUTDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="classes\brands.cs" />
     <Compile Include="classes\CarParkDBContext.cs" />
     <Compile Include="classes\CarParkingSpaces.cs" />
@@ -84,6 +89,12 @@
     <Compile Include="screens\formMusteriListele.Designer.cs">
       <DependentUpon>formMusteriListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="screens\formOtoparkYerleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\formOtoparkYerleri.Designer.cs">
+      <DependentUpon>formOtoparkYerleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="screens\formSeri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +119,23 @@
     <EmbeddedResource Include="screens\formMusteriListele.resx">
       <DependentUpon>formMusteriListele.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="screens\formOtoparkYerleri.resx">
+      <DependentUpon>formOtoparkYerleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screens\formSeri.resx">
       <DependentUpon>formSeri.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CarParkAUTDataSet.xsc">
+      <DependentUpon>CarParkAUTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarParkAUTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarParkAUTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarParkAUTDataSet.xss">
+      <DependentUpon>CarParkAUTDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
