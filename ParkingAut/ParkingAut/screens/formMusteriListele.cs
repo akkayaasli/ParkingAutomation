@@ -66,5 +66,21 @@ namespace ParkingAut.screens
                 pictureBox1.ImageLocation = openFileDialog1.FileName;
             }
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            var ekle = new customer();
+            ekle.AdiSoyadi = txtAdiSoyadi.Text;
+            ekle.Telefon = txtTelefon.Text;
+            ekle.Adres = txtAdres.Text;
+            ekle.Email = txtEmail.Text;
+            ekle.Resim = pictureBox1.ImageLocation;
+            ekle.Tarih = dateTimeTarih.Value;
+            db.TableCustomer.Add(ekle);
+            db.SaveChanges();
+            MessageBox.Show("Ekleme işlemi başarılı", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Temizle();
+            dataGridView1.DataSource = db.TableCustomer.ToList();
+        }
     }
 }
