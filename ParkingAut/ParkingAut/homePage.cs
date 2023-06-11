@@ -45,5 +45,11 @@ namespace ParkingAut
             screens.formSeri seri = new screens.formSeri();
             seri.Show();
         }
+
+        private void btnMusteriListele_Click(object sender, EventArgs e)
+        {
+            screens.formMusteriListele seri = new screens.formMusteriListele();
+            seri.Show();
+        }
     }
 }

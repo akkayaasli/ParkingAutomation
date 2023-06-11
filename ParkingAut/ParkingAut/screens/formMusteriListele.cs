@@ -93,5 +93,21 @@ namespace ParkingAut.screens
             Temizle();
             dataGridView1.DataSource = db.TableCustomer.ToList();
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            var guncelle = db.TableCustomer.FirstOrDefault(x => x.ID == id);
+            guncelle.AdiSoyadi = txtAdiSoyadi.Text;
+            guncelle.Telefon = txtTelefon.Text;
+            guncelle.Adres = txtAdres.Text;
+            guncelle.Email = txtEmail.Text;
+            guncelle.Resim = pictureBox1.ImageLocation;
+            guncelle.Tarih = dateTimeTarih.Value;
+            db.SaveChanges();
+            MessageBox.Show("Güncelleme işlemi başarılı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Temizle();
+            dataGridView1.DataSource = db.TableCustomer.ToList();
+        }
     }
 }

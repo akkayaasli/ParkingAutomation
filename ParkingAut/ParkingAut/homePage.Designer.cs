@@ -250,6 +250,7 @@
             this.btnMusteriListele.TabIndex = 3;
             this.btnMusteriListele.Text = "Müşteri Listele";
             this.btnMusteriListele.UseVisualStyleBackColor = true;
+            this.btnMusteriListele.Click += new System.EventHandler(this.btnMusteriListele_Click);
             // 
             // btnMuteriEkle
             // 
