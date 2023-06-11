@@ -66,5 +66,18 @@ namespace ParkingAut.screens
             MessageBox.Show("Araca yeni seri eklendi.","Kayıt",MessageBoxButtons.OK,MessageBoxIcon.Information);     
 
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ListViewItem SecilenID = listView1.SelectedItems[0];
+            int secilenID = int.Parse(SecilenID.SubItems[0].Text);
+            var sil = db.TableSerialNum.FirstOrDefault(x => x.ID == secilenID);
+            db.TableSerialNum.Remove(sil);
+            db.SaveChanges();
+            MessageBox.Show("Araç serisi silindi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Listele();
+            Temizle();
+
+        }
     }
 }
