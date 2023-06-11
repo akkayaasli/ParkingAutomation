@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homePage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.müşterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müşteriEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +56,7 @@
             this.btnMuteriEkle = new System.Windows.Forms.Button();
             this.saatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +134,7 @@
             // markaTool
             // 
             this.markaTool.Name = "markaTool";
-            this.markaTool.Size = new System.Drawing.Size(107, 22);
+            this.markaTool.Size = new System.Drawing.Size(180, 22);
             this.markaTool.Text = "Marka";
             this.markaTool.Click += new System.EventHandler(this.markaTool_Click);
             // 
@@ -187,83 +189,131 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.Size = new System.Drawing.Size(800, 122);
             this.panel1.TabIndex = 1;
             // 
             // btnSatis
             // 
+            this.btnSatis.FlatAppearance.BorderSize = 0;
+            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSatis.ImageKey = "satıs.png";
+            this.btnSatis.ImageList = this.imageList1;
             this.btnSatis.Location = new System.Drawing.Point(416, 13);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(75, 45);
+            this.btnSatis.Size = new System.Drawing.Size(75, 91);
             this.btnSatis.TabIndex = 10;
             this.btnSatis.Text = "Satış";
+            this.btnSatis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSatis.UseVisualStyleBackColor = true;
             // 
             // btnSeri
             // 
+            this.btnSeri.FlatAppearance.BorderSize = 0;
+            this.btnSeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeri.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSeri.ImageKey = "seri.png";
+            this.btnSeri.ImageList = this.imageList1;
             this.btnSeri.Location = new System.Drawing.Point(578, 13);
             this.btnSeri.Name = "btnSeri";
-            this.btnSeri.Size = new System.Drawing.Size(75, 45);
+            this.btnSeri.Size = new System.Drawing.Size(78, 91);
             this.btnSeri.TabIndex = 9;
             this.btnSeri.Text = "Seri";
+            this.btnSeri.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSeri.UseVisualStyleBackColor = true;
             this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
             // 
             // btnMarka
             // 
+            this.btnMarka.FlatAppearance.BorderSize = 0;
+            this.btnMarka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarka.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMarka.ImageKey = "marka.png";
+            this.btnMarka.ImageList = this.imageList1;
             this.btnMarka.Location = new System.Drawing.Point(497, 13);
             this.btnMarka.Name = "btnMarka";
-            this.btnMarka.Size = new System.Drawing.Size(75, 45);
+            this.btnMarka.Size = new System.Drawing.Size(75, 91);
             this.btnMarka.TabIndex = 8;
             this.btnMarka.Text = "Marka";
+            this.btnMarka.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMarka.UseVisualStyleBackColor = true;
             this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
             // 
             // btnOtoparkYerleri
             // 
+            this.btnOtoparkYerleri.FlatAppearance.BorderSize = 0;
+            this.btnOtoparkYerleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOtoparkYerleri.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOtoparkYerleri.ImageKey = "otoparkYerleri.png";
+            this.btnOtoparkYerleri.ImageList = this.imageList1;
             this.btnOtoparkYerleri.Location = new System.Drawing.Point(335, 13);
             this.btnOtoparkYerleri.Name = "btnOtoparkYerleri";
-            this.btnOtoparkYerleri.Size = new System.Drawing.Size(75, 45);
+            this.btnOtoparkYerleri.Size = new System.Drawing.Size(75, 91);
             this.btnOtoparkYerleri.TabIndex = 6;
             this.btnOtoparkYerleri.Text = "Otopark Yerleri";
+            this.btnOtoparkYerleri.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOtoparkYerleri.UseVisualStyleBackColor = true;
             this.btnOtoparkYerleri.Click += new System.EventHandler(this.btnOtoparkYerleri_Click);
             // 
             // btnAracOtoparkCikisi
             // 
+            this.btnAracOtoparkCikisi.FlatAppearance.BorderSize = 0;
+            this.btnAracOtoparkCikisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAracOtoparkCikisi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAracOtoparkCikisi.ImageKey = "otoparkCıkıs.jpg";
+            this.btnAracOtoparkCikisi.ImageList = this.imageList1;
             this.btnAracOtoparkCikisi.Location = new System.Drawing.Point(254, 13);
             this.btnAracOtoparkCikisi.Name = "btnAracOtoparkCikisi";
-            this.btnAracOtoparkCikisi.Size = new System.Drawing.Size(75, 45);
+            this.btnAracOtoparkCikisi.Size = new System.Drawing.Size(75, 91);
             this.btnAracOtoparkCikisi.TabIndex = 5;
             this.btnAracOtoparkCikisi.Text = "Otopark Çıkışı";
+            this.btnAracOtoparkCikisi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAracOtoparkCikisi.UseVisualStyleBackColor = true;
             // 
             // btnAracOtoparkGirisi
             // 
+            this.btnAracOtoparkGirisi.FlatAppearance.BorderSize = 0;
+            this.btnAracOtoparkGirisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAracOtoparkGirisi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAracOtoparkGirisi.ImageKey = "otoparkGiris.jpg";
+            this.btnAracOtoparkGirisi.ImageList = this.imageList1;
             this.btnAracOtoparkGirisi.Location = new System.Drawing.Point(173, 13);
             this.btnAracOtoparkGirisi.Name = "btnAracOtoparkGirisi";
-            this.btnAracOtoparkGirisi.Size = new System.Drawing.Size(75, 45);
+            this.btnAracOtoparkGirisi.Size = new System.Drawing.Size(75, 91);
             this.btnAracOtoparkGirisi.TabIndex = 4;
             this.btnAracOtoparkGirisi.Text = "Otopark Girişi";
+            this.btnAracOtoparkGirisi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAracOtoparkGirisi.UseVisualStyleBackColor = true;
             // 
             // btnMusteriListele
             // 
+            this.btnMusteriListele.FlatAppearance.BorderSize = 0;
+            this.btnMusteriListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMusteriListele.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMusteriListele.ImageKey = "musteriListele.png";
+            this.btnMusteriListele.ImageList = this.imageList1;
             this.btnMusteriListele.Location = new System.Drawing.Point(92, 13);
             this.btnMusteriListele.Name = "btnMusteriListele";
-            this.btnMusteriListele.Size = new System.Drawing.Size(75, 45);
+            this.btnMusteriListele.Size = new System.Drawing.Size(75, 91);
             this.btnMusteriListele.TabIndex = 3;
             this.btnMusteriListele.Text = "Müşteri Listele";
+            this.btnMusteriListele.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMusteriListele.UseVisualStyleBackColor = true;
             this.btnMusteriListele.Click += new System.EventHandler(this.btnMusteriListele_Click);
             // 
             // btnMuteriEkle
             // 
+            this.btnMuteriEkle.FlatAppearance.BorderSize = 0;
+            this.btnMuteriEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuteriEkle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMuteriEkle.ImageKey = "müsteri.png";
+            this.btnMuteriEkle.ImageList = this.imageList1;
             this.btnMuteriEkle.Location = new System.Drawing.Point(11, 13);
             this.btnMuteriEkle.Name = "btnMuteriEkle";
-            this.btnMuteriEkle.Size = new System.Drawing.Size(75, 45);
+            this.btnMuteriEkle.Size = new System.Drawing.Size(75, 91);
             this.btnMuteriEkle.TabIndex = 2;
             this.btnMuteriEkle.Text = "Müşteri Ekle";
+            this.btnMuteriEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMuteriEkle.UseVisualStyleBackColor = true;
             // 
             // saatToolStripMenuItem
@@ -275,6 +325,19 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "seri.png");
+            this.imageList1.Images.SetKeyName(1, "marka.png");
+            this.imageList1.Images.SetKeyName(2, "satıs.png");
+            this.imageList1.Images.SetKeyName(3, "otoparkYerleri.png");
+            this.imageList1.Images.SetKeyName(4, "otoparkCıkıs.jpg");
+            this.imageList1.Images.SetKeyName(5, "otoparkGiris.jpg");
+            this.imageList1.Images.SetKeyName(6, "musteriListele.png");
+            this.imageList1.Images.SetKeyName(7, "müsteri.png");
             // 
             // homePage
             // 
@@ -322,6 +385,7 @@
         private System.Windows.Forms.Button btnMusteriListele;
         private System.Windows.Forms.ToolStripMenuItem saatToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
